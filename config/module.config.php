@@ -30,7 +30,6 @@ return [
         'matryoshka-connected' => [
                 'Strapieno\Place\Api\V1\Rest\ConnectedResource' => [
                     'model' => 'Strapieno\Place\Model\PlaceModelService',
-                    'prototype_strategy' => 'Matryoshka\Model\Object\PrototypeStrategy\ServiceLocatorStrategy',
                     'collection_criteria' => 'Strapieno\Place\Model\Criteria\PlaceCollectionCriteria',
                     'entity_criteria' => 'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria',
                     'hydrator' => 'PlaceApiHydrator'
@@ -83,13 +82,7 @@ return [
                 'route_name' => 'api-rest/place',
                 'route_identifier_name' => 'place_id',
                 'hydrator' => 'PlaceApiHydrator',
-            ],
-            'Strapieno\Place\Model\Entity\ClubPriveEntity' => [
-                'entity_identifier_name' => 'id',
-                'route_name' => 'api-rest/place',
-                'route_identifier_name' => 'place_id',
-                'hydrator' => 'PlaceApiHydrator',
-            ],
+            ]
         ],
     ],
     'zf-content-validation' => [
