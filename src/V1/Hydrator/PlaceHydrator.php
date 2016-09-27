@@ -44,12 +44,6 @@ class PlaceHydrator extends DateHystoryHydrator
         );
 
         $this->addStrategy(
-            'media',
-            // FIXME library 2 param type function
-            new HasManyStrategy(new MediaObject(), new Collection(), true)
-        );
-
-        $this->addStrategy(
             'user_id',
             new ReferenceEntityCompressStrategy(new UserReference(), false)
         );
